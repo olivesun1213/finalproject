@@ -42,3 +42,11 @@ tbody>tr>td:first-of-type {
 .bg-grey-card {
     background-color: #495057;
 }
+
+.filtered {
+    color: black;
+}
+
+.positions {
+    text-align: left;
+}
