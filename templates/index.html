@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- bootstrap's meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Accident Fatality Prediction</title>
+
+    <!-- bootstrap css links and script -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom styles for this bootstrap template -->
+    <link href="{{url_for('static', filename='css/cover.css')}}" rel="stylesheet">
+    <link href="chrome-extension://idpbkophnbfijcnlffdmmppgnncgappc/css/content.css" rel="stylesheet" type="text/css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Custom stylesheet for web scraper -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+
+
+<body class="bg-dark text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading text-light header-font">Mission to Mars</h1>
+            <p class="lead text-light">All the data you never knew you needed about the red planet.</p>
+            <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/predict" role="button">Predict!</a></p>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>A <a class="foot-a" href="https://github.com/olivesun1213/finalproject">Machine Learning Project</a> by Team B &#169; 2020</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/css/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="static/css/assets/js/vendor/jquery-slim.min.js> <\/script>')
+    </script>
+    <script src="/static/css/popper.min.js"></script>
+    <script src="/static/css/bootstrap.min.js"></script>
+
+</body>
+
+
+</html>
