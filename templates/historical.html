@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Toronto Traffic Historical Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/historicalstyle.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Toronto Traffic
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+
+                      <li class="filter list-group-item">
+                        <label for="hour"> Hour </label>                        
+                        <select name="hour" id="hour">
+                          <option value="0"> 0 </option>
+                          <option value="1"> 1 </option>
+                          <option value="2"> 2 </option>
+                          <option value="3"> 3 </option>
+                          <option value="4"> 4 </option>
+                          <option value="5"> 5 </option>
+                          <option value="6"> 6 </option>
+                          <option value="7"> 7 </option>
+                          <option value="8"> 8 </option>
+                          <option value="9"> 9 </option>
+                          <option value="10"> 10 </option>
+                          <option value="11"> 11 </option>
+                          <option value="12"> 12 </option>
+                          <option value="13"> 13 </option>
+                          <option value="14"> 14 </option>
+                          <option value="15"> 15 </option>
+                          <option value="16"> 16 </option>
+                          <option value="17"> 17 </option>
+                          <option value="18"> 18 </option>
+                          <option value="19"> 19 </option>
+                          <option value="20"> 20 </option>
+                          <option value="21"> 21 </option>
+                          <option value="22"> 22 </option>
+                          <option value="23"> 23 </option>                          
+                        </select>
+                      </li>
+
+                      <li class="filter list-group-item">
+                        <label for="roadclass"> Road Class </label>                        
+                        <select name="roadclass" id="roadclass">
+                          <option value="Collector"> Collector </option>
+                          <option value="Expressway"> Expressway </option>
+                          <option value="Laneway"> Laneway </option>
+                          <option value="Local"> Local </option>
+                          <option value="Major Arterial"> Major Arterial </option>
+                          <option value="Major Arterial Ramp"> Major Arterial Ramp </option>
+                          <option value="Minor Arterial"> Minor Arterial </option>
+                          <option value="Pending"> Pending </option>                          
+                        </select>
+                      </li>
+
+                      <li class="filter list-group-item">
+                        <label for="trafficcontrol"> Traffic Control </label>                        
+                        <select name="trafficcontrol" id="trafficcontrol">
+                          <option value="No Control"> No Control </option>
+                          <option value="Pedestrian Crossover"> Pedestrian Crossover </option>
+                          <option value="Police Control"> Police Control </option>
+                          <option value="PXO - No Ped"> PXO - No Ped </option>
+                          <option value="School Guard"> School Guard </option>
+                          <option value="Stop Sign"> Stop Sign </option>
+                          <option value="Streetcar (Stop for)"> Streetcar (Stop for) </option>
+                          <option value="Traffic Controller"> Traffic Controller </option>
+                          <option value="Traffic Gate"> Traffic Gate </option>
+                          <option value="Traffic Signal"> Traffic Signal </option>
+                          <option value="Yield Sign"> Yield Sign </option>
+                        </select>
+                      </li>
+                      
+                      <li class="filter list-group-item">
+                        <label for="visibility">Visibility</label>                        
+                        <select name="visibility" id="visibility">
+                          <option value="Clear"> Clear </option>
+                          <option value="Drifting Snow"> Drifting Snow </option>
+                          <option value="Fog, Mist, Smoke, Dust"> Fog, Mist, Smoke, Dust </option>
+                          <option value="Freezing Rain"> Freezing Rain </option>
+                          <option value="Rain"> Rain </option>
+                          <option value="Snow"> Snow </option>
+                          <option value="Strong wind"> Strong wind </option>                          
+                        </select>
+                      </li>
+
+                      <li class="filter list-group-item">
+                        <label for="light">Light</label>
+                        <select name="light" id="light">
+                          <option value="Dark"> Dark </option>
+                          <option value="Dark, artificial"> Dark, artificial </option>
+                          <option value="Dawn"> Dawn </option>
+                          <option value="Dawn, artificial"> Dawn, artificial </option>
+                          <option value="Daylight"> Daylight </option>
+                          <option value="Daylight, artificial"> Daylight, artificial </option>
+                          <option value="Dusk"> Dusk </option>
+                          <option value="Dusk, artificial"> Dusk, artificial </option>                          
+                        </select>
+                      </li>
+
+                      <li class="filter list-group-item">
+                        <label for="condition">Road Condition</label>
+                        <select name="condition" id="condition">
+                          <option value="Dry"> Dry </option>
+                          <option value="Ice"> Ice </option>
+                          <option value="Loose Sand or Gravel"> Loose Sand or Gravel </option>
+                          <option value="Loose Snow"> Loose Snow </option>
+                          <option value="Packed Snow"> Packed Snow </option>
+                          <option value="Slush"> Slush </option>
+                          <option value="Spilled liquid"> Spilled liquid </option>
+                          <option value="Wet"> Wet </option>                          
+                        </select>
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default"> Search </button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="col-md-10">
+          <label> Historical Data </label>          
+          <div id="table-area" class="">
+            <table id="traffic-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">Hour</th>
+                  <th class="table-head">Street</th>                  
+                  <th class="table-head">Latitude</th>
+                  <th class="table-head">Longitude</th>
+                  <th class="table-head">Neighbourhood</th>
+                  <th class="table-head">Fatality</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Toronto Traffic</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="../static/js/historicaldata.js"></script>
+  <script src="../static/js/historicalapp.js"></script>
+</body>
+
+</html>
