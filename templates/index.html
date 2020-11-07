@@ -15,17 +15,17 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
     <!-- Bootstrap core CSS -->
-    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Custom styles for this bootstrap template -->
-    <link href="{{url_for('static', filename='css/cover.css')}}" rel="stylesheet">
+    <link href="../static/css/cover.css" rel="stylesheet">
     <link href="chrome-extension://idpbkophnbfijcnlffdmmppgnncgappc/css/content.css" rel="stylesheet" type="text/css">
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- Custom stylesheet for web scraper -->
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+    <!-- Custom stylesheet  -->
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
 </head>
 
 
@@ -38,9 +38,10 @@
         </header>
 
         <main role="main" class="inner cover">
-            <h1 class="cover-heading text-light header-font">Mission to Mars</h1>
-            <p class="lead text-light">All the data you never knew you needed about the red planet.</p>
+            <h1 class="cover-heading text-light header-font">Accident Fatality Predictor</h1>
+            <p class="lead text-light">some text here.. blah blah blah</p>
             <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/predict" role="button">Predict!</a></p>
+            <!-- <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/dashboard" role="button">Or check out our dashboard</a></p> -->
         </main>
 
         <footer class="mastfoot mt-auto">
@@ -54,12 +55,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/css/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="static/css/assets/js/vendor/jquery-slim.min.js> <\/script>')
-    </script>
-    <script src="/static/css/popper.min.js"></script>
-    <script src="/static/css/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
 </body>
 
