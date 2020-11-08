@@ -8,6 +8,12 @@
     font-size: 50px;
 }
 
+.pred-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
 .mini-header-font {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
@@ -48,5 +54,5 @@ tbody>tr>td:first-of-type {
 }
 
 .positions {
-    text-align: left;
+    text-align: right;
 }
