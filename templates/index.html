@@ -29,132 +29,162 @@
 </head>
 
 
-<body class="bg-dark text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<body class="text-center">
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
+                <!-- <h3 class="masthead-brand header-font">Accident Fatality Predictor</h3> -->
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                    <a class="nav-link" href="/models">Models</a>
+                    <a class="nav-link" href="/historicaldata">Data</a>
 
+
+                </nav>
             </div>
         </header>
 
         <main role="main" class="inner cover">
-            <h1 class="cover-heading text-light header-font">Accident Fatality Predictor</h1>
-            <p class="lead text-light">some text here.. blah blah blah</p>
+            <h1 class="text-light header-font">Accident Fatality Predictor</h1>
+            <h4 class=" text-light mb-3">Choose features below to make a prediction:</h4>
+            <div class="row"></div>
+            <form class="mt-3" action="/predict" method="POST">
 
-            <label class="positions"> Hour </label>             
-            <select name="hour" id="hour" class="filtered">
-                <option value="0" class="filtered"> 0 </option>
-                <option value="1" class="filtered"> 1 </option>
-                <option value="2" class="filtered"> 2 </option>
-                <option value="3" class="filtered"> 3 </option>
-                <option value="4" class="filtered"> 4 </option>
-                <option value="5" class="filtered"> 5 </option>
-                <option value="6" class="filtered"> 6 </option>
-                <option value="7" class="filtered"> 7 </option>
-                <option value="8" class="filtered"> 8 </option>
-                <option value="9" class="filtered"> 9 </option>
-                <option value="10" class="filtered"> 10 </option>
-                <option value="11" class="filtered"> 11 </option>
-                <option value="12" class="filtered"> 12 </option>
-                <option value="13" class="filtered"> 13 </option>
-                <option value="14" class="filtered"> 14 </option>
-                <option value="15" class="filtered"> 15 </option>
-                <option value="16" class="filtered"> 16 </option>
-                <option value="17" class="filtered"> 17 </option>
-                <option value="18" class="filtered"> 18 </option>
-                <option value="19" class="filtered"> 19 </option>
-                <option value="20" class="filtered"> 20 </option>
-                <option value="21" class="filtered"> 21 </option>
-                <option value="22" class="filtered"> 22 </option>
-                <option value="23" class="filtered"> 23 </option>                          
-            </select>
-            <br>            
+                <div class="form-group ml-4">
 
-            <label class="positions"> Road Class </label>             
-            <select name="road_class" id="road_class" class="filtered">
-                <option value="Collector" class="filtered"> Collector </option>
-                <option value="Expressway" class="filtered"> Expressway </option>
-                <option value="Laneway" class="filtered"> Laneway </option>
-                <option value="Local"class="filtered"> Local </option>
-                <option value="Major Arterial" class="filtered"> Major Arterial </option>
-                <option value="Major Arterial Ramp" class="filtered"> Major Arterial Ramp </option>
-                <option value="Minor Arterial" class="filtered"> Minor Arterial </option>                
-                <option value="Pending" class="filtered"> Pending </option>                
-            </select>
-            <br>
+                    <div class="row mb-2">
+                        <label class="col-sm-3 control-label positions">Hour</label>
+                        <div class="col-sm-6">
+                            <select name="hour" id="hour" class="filtered form-control form-control-sm">
+                                <option value="0" class="filtered"> 0 </option>
+                                <option value="1" class="filtered"> 1 </option>
+                                <option value="2" class="filtered"> 2 </option>
+                                <option value="3" class="filtered"> 3 </option>
+                                <option value="4" class="filtered"> 4 </option>
+                                <option value="5" class="filtered"> 5 </option>
+                                <option value="6" class="filtered"> 6 </option>
+                                <option value="7" class="filtered"> 7 </option>
+                                <option value="8" class="filtered"> 8 </option>
+                                <option value="9" class="filtered"> 9 </option>
+                                <option value="10" class="filtered"> 10 </option>
+                                <option value="11" class="filtered"> 11 </option>
+                                <option value="12" class="filtered"> 12 </option>
+                                <option value="13" class="filtered"> 13 </option>
+                                <option value="14" class="filtered"> 14 </option>
+                                <option value="15" class="filtered"> 15 </option>
+                                <option value="16" class="filtered"> 16 </option>
+                                <option value="17" class="filtered"> 17 </option>
+                                <option value="18" class="filtered"> 18 </option>
+                                <option value="19" class="filtered"> 19 </option>
+                                <option value="20" class="filtered"> 20 </option>
+                                <option value="21" class="filtered"> 21 </option>
+                                <option value="22" class="filtered"> 22 </option>
+                                <option value="23" class="filtered"> 23 </option>                          
+                            </select>
+                        </div>
+                    </div>
 
-            <label class="positions"> Traffic Control </label>             
-            <select name="traffic_control" id="traffic_control" class="filtered">
-                <option value="No Control" class="filtered"> No Control </option>
-                <option value="Pedestrian Crossover" class="filtered"> Pedestrian Crossover </option>
-                <option value="Police Control" class="filtered"> Police Control </option>
-                <option value="PXO - No Ped"class="filtered"> PXO - No Ped </option>
-                <option value="School Guard" class="filtered"> School Guard </option>
-                <option value="Stop Sign" class="filtered"> Stop Sign </option>
-                <option value="Streetcar (Stop for)" class="filtered"> Streetcar (Stop for) </option>
-                <option value="Traffic Controller" class="filtered"> Traffic Controller </option>
-                <option value="Traffic Gate" class="filtered"> Traffic Gate </option>
-                <option value="Traffic Signal" class="filtered"> Traffic Signal </option>
-                <option value="Yield Sign" class="filtered"> Yield Sign </option>                
-            </select>
-            <br>
+                    <div class="row mb-2">
+                        <label class="col-sm-3 control-label positions">Road Class</label>
+                        <div class="col-sm-6">
+                            <select name="road_class" id="road_class" class="filtered form-control form-control-sm">
+                                <option value="Collector" class="filtered"> Collector </option>
+                                <option value="Expressway" class="filtered"> Expressway </option>
+                                <option value="Laneway" class="filtered"> Laneway </option>
+                                <option value="Local"class="filtered"> Local </option>
+                                <option value="Major Arterial" class="filtered"> Major Arterial </option>
+                                <option value="Major Arterial Ramp" class="filtered"> Major Arterial Ramp </option>
+                                <option value="Minor Arterial" class="filtered"> Minor Arterial </option>                
+                                <option value="Pending" class="filtered"> Pending </option>                
+                            </select>
+                        </div>
+                    </div>
 
-            <label class="positions"> Visibility </label>             
-            <select name="visibility" id="visibility" class="filtered">
-                <option value="Clear" class="filtered"> Clear </option>
-                <option value="Drifting Snow" class="filtered"> Drifting Snow </option>
-                <option value="Fog, Mist, Smoke, Dust" class="filtered"> Fog, Mist, Smoke, Dust </option>
-                <option value="Freezing Rain"class="filtered"> Freezing Rain </option>
-                <option value="Rain" class="filtered"> Rain </option>
-                <option value="Snow" class="filtered"> Snow </option>
-                <option value="Strong wind" class="filtered"> Strong wind </option>                          
-            </select>
-            <br>
+                    <div class="row mb-2">
+                        <label class="col-sm-3 control-label positions">Traffic Control</label>
+                        <div class="col-sm-6">
+                            <select name="traffic_control" id="traffic_control" class="filtered form-control form-control-sm">
+                                <option value="No Control" class="filtered"> No Control </option>
+                                <option value="Pedestrian Crossover" class="filtered"> Pedestrian Crossover </option>
+                                <option value="Police Control" class="filtered"> Police Control </option>
+                                <option value="PXO - No Ped"class="filtered"> PXO - No Ped </option>
+                                <option value="School Guard" class="filtered"> School Guard </option>
+                                <option value="Stop Sign" class="filtered"> Stop Sign </option>
+                                <option value="Streetcar (Stop for)" class="filtered"> Streetcar (Stop for) </option>
+                                <option value="Traffic Controller" class="filtered"> Traffic Controller </option>
+                                <option value="Traffic Gate" class="filtered"> Traffic Gate </option>
+                                <option value="Traffic Signal" class="filtered"> Traffic Signal </option>
+                                <option value="Yield Sign" class="filtered"> Yield Sign </option>                
+                            </select>
+                        </div>
+                    </div>
 
-            <label class="positions"> Light </label>
-            <select name="light" id="light" class="filtered">
-                <option value="Dark" class="filtered"> Dark </option>
-                <option value="Dark, artificial" class="filtered"> Dark, artificial </option>
-                <option value="Dawn" class="filtered"> Dawn </option>
-                <option value="Dawn, artificial" class="filtered"> Dawn, artificial </option>
-                <option value="Daylight" class="filtered"> Daylight </option>
-                <option value="Daylight, artificial" class="filtered"> Daylight, artificial </option>
-                <option value="Dusk" class="filtered"> Dusk </option>
-                <option value="Dusk, artificial" class="filtered"> Dusk, artificial </option>                          
-            </select>
-            <br>
+                    <div class="row mb-2">
+                        <label class="col-sm-3 control-label positions">Visibility</label>
+                        <div class="col-sm-6">
+                            <select name="visibility" id="visibility" class="filtered form-control form-control-sm">
+                                <option value="Clear" class="filtered"> Clear </option>
+                                <option value="Drifting Snow" class="filtered"> Drifting Snow </option>
+                                <option value="Fog, Mist, Smoke, Dust" class="filtered"> Fog, Mist, Smoke, Dust </option>
+                                <option value="Freezing Rain"class="filtered"> Freezing Rain </option>
+                                <option value="Rain" class="filtered"> Rain </option>
+                                <option value="Snow" class="filtered"> Snow </option>
+                                <option value="Strong wind" class="filtered"> Strong wind </option>                          
+                            </select>
+                        </div>
+                    </div>
 
-            <label class="positions"> Road Condition </label>
-            <select name="condition" id="condition" class="filtered">
-                <option value="Dry" class="filtered"> Dry </option>
-                <option value="Ice" class="filtered"> Ice </option>
-                <option value="Loose Sand or Gravel" class="filtered"> Loose Sand or Gravel </option>
-                <option value="Loose Snow" class="filtered"> Loose Snow </option>
-                <option value="Packed Snow" class="filtered"> Packed Snow </option>
-                <option value="Slush" class="filtered"> Slush </option>
-                <option value="Spilled liquid" class="filtered"> Spilled liquid </option>
-                <option value="Wet" class="filtered"> Wet </option>                          
-            </select>
-            <br>
+                    <div class="row mb-2">
+                        <label class="col-sm-3 control-label positions">Light</label>
+                        <div class="col-sm-6">
+                            <select name="light" id="light" class="filtered form-control form-control-sm">
+                                <option value="Dark" class="filtered"> Dark </option>
+                                <option value="Dark, artificial" class="filtered"> Dark, artificial </option>
+                                <option value="Dawn" class="filtered"> Dawn </option>
+                                <option value="Dawn, artificial" class="filtered"> Dawn, artificial </option>
+                                <option value="Daylight" class="filtered"> Daylight </option>
+                                <option value="Daylight, artificial" class="filtered"> Daylight, artificial </option>
+                                <option value="Dusk" class="filtered"> Dusk </option>
+                                <option value="Dusk, artificial" class="filtered"> Dusk, artificial </option>                          
+                            </select>
+                        </div>
+                    </div>
 
-            <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/predict" role="button">Predict!</a></p>
-            <!-- <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/dashboard" role="button">Or check out our dashboard</a></p> -->
+                    <div class="row mb-2">
+                        <label class="col-sm-3 ontrol-label positions">Road Condition</label>
+                        <div class="col-sm-6">
+                            <select name="condition" id="condition" class="filtered form-control form-control-sm">
+                                <option value="Dry" class="filtered"> Dry </option>
+                                <option value="Ice" class="filtered"> Ice </option>
+                                <option value="Loose Sand or Gravel" class="filtered"> Loose Sand or Gravel </option>
+                                <option value="Loose Snow" class="filtered"> Loose Snow </option>
+                                <option value="Packed Snow" class="filtered"> Packed Snow </option>
+                                <option value="Slush" class="filtered"> Slush </option>
+                                <option value="Spilled liquid" class="filtered"> Spilled liquid </option>
+                                <option value="Wet" class="filtered"> Wet </option>                          
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn bg-mars-red my-2">Predict!</button>
+            </form>
         </main>
 
         <footer class="mastfoot mt-auto">
             <div class="inner">
-                <p>A <a class="foot-a" href="https://github.com/olivesun1213/finalproject">Machine Learning Project</a> by Team B &#169; 2020</p>
+                <p>A <a class="text-mars-red" href="https://github.com/olivesun1213/finalproject">Machine Learning Project</a> by Team B &#169; 2020</p>
             </div>
         </footer>
-    </div>
+        </div>
 
 
-    <!-- Bootstrap core JavaScript
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
 </body>
 
