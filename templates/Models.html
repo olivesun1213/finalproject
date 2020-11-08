@@ -29,57 +29,64 @@
 </head>
 
 
-<body class="bg-dark text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
+<body class="text-center">
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-5">
             <div class="inner">
-
+                <h3 class="masthead-brand pred-font">Accident Fatality Predictor</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                    <a class="nav-link active" href="/models">Models</a>
+                    <a class="nav-link" href="/historicaldata">Data</a>
+                </nav>
             </div>
         </header>
 
         <main role="main" class="inner cover">
-            <h1 class="cover-heading text-light header-font">Accident Fatality Predictor</h1>
-    
-        </main>
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading text-light header-font">Visualization</h1>
-            <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="file:///C:/Users/OSun/Documents/GitHub/finalproject/templates/dashboard.html" role="button">visualization</a></p>
-            <!-- <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/dashboard" role="button">Or check out our dashboard</a></p> -->
-        </main>
 
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading text-light header-font">Historical Data</h1>
-            <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="#" role="button">Historical Data</a></p>
-            <!-- <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/dashboard" role="button">Or check out our dashboard</a></p> -->
-        </main>
-
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading text-light header-font">Model Used</h1>
-            <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="http://localhost:8888/notebooks/Models/ML_model_DecisionTrees.ipynb" role="button">Decision Tree</a></p>
-            <!-- <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/dashboard" role="button">Or check out our dashboard</a></p> -->
-        </main>
-
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading text-light header-font">Other Models Tested</h1>
-            <style>
-                .center { text-align: center; }
-                .right { text-align: right; }
-            </style>
-            <div class="container">
-                <div class="row">
-                <div class="box col"> <a class="btn bg-mars-red btn-md" href="#" role="button">Neural Network</a></div>
-                <div class="box col"> <a class="btn bg-mars-red btn-md" href="#" role="button">Random Forest</a>k</a></div>
-                <div class="w-100"></div>
-                <div class="box col"><a class="btn bg-mars-red btn-md" href="#" role="button">Logistic Regression</a></div>
-                <div class="box col"><a class="btn bg-mars-red btn-md" href="#" role="button">SVM</a></div>
-              </div>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <p class="lead text-light"><a class="btn bg-mars-red btn-lg" href="http://localhost:8888/notebooks/Models/ML_model_DecisionTrees.ipynb" role="button">Our Model (Decision Trees)</a></p>
+                </div>
+                <div class="col-sm-4"></div>
             </div>
-              
-            </main>
+
+            <div class="row mt-3 mb-2">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <h3 class="text-light pred-font text-center">Other Models Tested</h3>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <a class="btn btn-outline-light" href="#" role="button">Neural Network</a>
+                </div>
+                <div class="col-sm-3">
+                    <a class="btn btn-outline-light" href="#" role="button">Random Forest</a>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <a class="btn btn-outline-light" href="#" role="button">Logistic Regression</a>
+                </div>
+                <div class="col-sm-3">
+                    <a class="btn btn-outline-light" href="#" role="button">SVM</a></div>
+                <div class="col-sm-3"></div>
+            </div>
+
+        </main>
 
         <footer class="mastfoot mt-auto">
             <div class="inner">
-                <p>A <a class="foot-a" href="https://github.com/olivesun1213/finalproject">Machine Learning Project</a> by Team B &#169; 2020</p>
+                <p>A <a class="text-mars-red" href="https://github.com/olivesun1213/finalproject">Machine Learning Project</a> by Team B &#169; 2020</p>
             </div>
         </footer>
     </div>
