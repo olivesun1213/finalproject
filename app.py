@@ -60,6 +60,8 @@ def predict():
         # print(len(data_array))
 
     # predicting fatal or non-fatal with our model
+    modelfile = 'models/DecisionTree_final_model.pickle'
+    model = p.load(open(modelfile, 'rb'))
     predict = model.predict(data_array)
 
     return render_template("prediction.html", pred = predict[0])
@@ -111,6 +113,4 @@ def onehot_encode(feature, value):
     return array
 
 if __name__ == '__main__':
-    modelfile = 'models/DecisionTree_final_model.pickle'
-    model = p.load(open(modelfile, 'rb'))
     app.run(debug=True)
