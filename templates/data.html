@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="../static/favicon.ico">
 
     <title>Accident Fatality Prediction</title>
 
@@ -32,7 +33,7 @@
 
 <body class="text-center">
     <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-5">
+        <header class="masthead mb-auto">
             <div class="inner">
                 <h3 class="masthead-brand pred-font">Accident Fatality Predictor</h3>
                 <nav class="nav nav-masthead justify-content-center">
@@ -44,7 +45,8 @@
             </div>
         </header>
 
-        <div class="row margin-top-50">
+        <div class="row mt-3"></div>
+        <div class="row">
             <div class="col-md-2">
                 <aside class="filters">
                     <div class="panel panel-default">
@@ -54,106 +56,106 @@
                                 <div class="form-group">
                                     <ul class="list-group" id="filters">
 
-                                        <li class="filter list-group-item">
+                                        <li class="filter list-group-item bg-secondary">
                                             <label for="hour"> Hour </label>
                                             <select name="hour" id="hour">
-                      <option value="0"> 0 </option>
-                      <option value="1"> 1 </option>
-                      <option value="2"> 2 </option>
-                      <option value="3"> 3 </option>
-                      <option value="4"> 4 </option>
-                      <option value="5"> 5 </option>
-                      <option value="6"> 6 </option>
-                      <option value="7"> 7 </option>
-                      <option value="8"> 8 </option>
-                      <option value="9"> 9 </option>
-                      <option value="10"> 10 </option>
-                      <option value="11"> 11 </option>
-                      <option value="12"> 12 </option>
-                      <option value="13"> 13 </option>
-                      <option value="14"> 14 </option>
-                      <option value="15"> 15 </option>
-                      <option value="16"> 16 </option>
-                      <option value="17"> 17 </option>
-                      <option value="18"> 18 </option>
-                      <option value="19"> 19 </option>
-                      <option value="20"> 20 </option>
-                      <option value="21"> 21 </option>
-                      <option value="22"> 22 </option>
-                      <option value="23"> 23 </option>                          
-                    </select>
+                          <option value="0"> 0 </option>
+                          <option value="1"> 1 </option>
+                          <option value="2"> 2 </option>
+                          <option value="3"> 3 </option>
+                          <option value="4"> 4 </option>
+                          <option value="5"> 5 </option>
+                          <option value="6"> 6 </option>
+                          <option value="7"> 7 </option>
+                          <option value="8"> 8 </option>
+                          <option value="9"> 9 </option>
+                          <option value="10"> 10 </option>
+                          <option value="11"> 11 </option>
+                          <option value="12"> 12 </option>
+                          <option value="13"> 13 </option>
+                          <option value="14"> 14 </option>
+                          <option value="15"> 15 </option>
+                          <option value="16"> 16 </option>
+                          <option value="17"> 17 </option>
+                          <option value="18"> 18 </option>
+                          <option value="19"> 19 </option>
+                          <option value="20"> 20 </option>
+                          <option value="21"> 21 </option>
+                          <option value="22"> 22 </option>
+                          <option value="23"> 23 </option>                          
+                        </select>
                                         </li>
 
-                                        <li class="filter list-group-item">
+                                        <li class="filter list-group-item bg-secondary">
                                             <label for="roadclass"> Road Class </label>
                                             <select name="roadclass" id="roadclass">
-                      <option value="Collector"> Collector </option>
-                      <option value="Expressway"> Expressway </option>
-                      <option value="Laneway"> Laneway </option>
-                      <option value="Local"> Local </option>
-                      <option value="Major Arterial"> Major Arterial </option>
-                      <option value="Major Arterial Ramp"> Major Arterial Ramp </option>
-                      <option value="Minor Arterial"> Minor Arterial </option>
-                      <option value="Pending"> Pending </option>                          
-                    </select>
+                          <option value="Collector"> Collector </option>
+                          <option value="Expressway"> Expressway </option>
+                          <option value="Laneway"> Laneway </option>
+                          <option value="Local"> Local </option>
+                          <option value="Major Arterial"> Major Arterial </option>
+                          <option value="Major Arterial Ramp"> Major Arterial Ramp </option>
+                          <option value="Minor Arterial"> Minor Arterial </option>
+                          <option value="Pending"> Pending </option>                          
+                        </select>
                                         </li>
 
-                                        <li class="filter list-group-item">
+                                        <li class="filter list-group-item bg-secondary">
                                             <label for="trafficcontrol"> Traffic Control </label>
                                             <select name="trafficcontrol" id="trafficcontrol">
-                      <option value="No Control"> No Control </option>
-                      <option value="Pedestrian Crossover"> Pedestrian Crossover </option>
-                      <option value="Police Control"> Police Control </option>
-                      <option value="PXO - No Ped"> PXO - No Ped </option>
-                      <option value="School Guard"> School Guard </option>
-                      <option value="Stop Sign"> Stop Sign </option>
-                      <option value="Streetcar (Stop for)"> Streetcar (Stop for) </option>
-                      <option value="Traffic Controller"> Traffic Controller </option>
-                      <option value="Traffic Gate"> Traffic Gate </option>
-                      <option value="Traffic Signal"> Traffic Signal </option>
-                      <option value="Yield Sign"> Yield Sign </option>
-                    </select>
+                          <option value="No Control"> No Control </option>
+                          <option value="Pedestrian Crossover"> Pedestrian Crossover </option>
+                          <option value="Police Control"> Police Control </option>
+                          <option value="PXO - No Ped"> PXO - No Ped </option>
+                          <option value="School Guard"> School Guard </option>
+                          <option value="Stop Sign"> Stop Sign </option>
+                          <option value="Streetcar (Stop for)"> Streetcar (Stop for) </option>
+                          <option value="Traffic Controller"> Traffic Controller </option>
+                          <option value="Traffic Gate"> Traffic Gate </option>
+                          <option value="Traffic Signal"> Traffic Signal </option>
+                          <option value="Yield Sign"> Yield Sign </option>
+                        </select>
                                         </li>
 
-                                        <li class="filter list-group-item">
+                                        <li class="filter list-group-item bg-secondary">
                                             <label for="visibility">Visibility</label>
                                             <select name="visibility" id="visibility">
-                      <option value="Clear"> Clear </option>
-                      <option value="Drifting Snow"> Drifting Snow </option>
-                      <option value="Fog, Mist, Smoke, Dust"> Fog, Mist, Smoke, Dust </option>
-                      <option value="Freezing Rain"> Freezing Rain </option>
-                      <option value="Rain"> Rain </option>
-                      <option value="Snow"> Snow </option>
-                      <option value="Strong wind"> Strong wind </option>                          
-                    </select>
+                          <option value="Clear"> Clear </option>
+                          <option value="Drifting Snow"> Drifting Snow </option>
+                          <option value="Fog, Mist, Smoke, Dust"> Fog, Mist, Smoke, Dust </option>
+                          <option value="Freezing Rain"> Freezing Rain </option>
+                          <option value="Rain"> Rain </option>
+                          <option value="Snow"> Snow </option>
+                          <option value="Strong wind"> Strong wind </option>                          
+                        </select>
                                         </li>
 
-                                        <li class="filter list-group-item">
+                                        <li class="filter list-group-item bg-secondary">
                                             <label for="light">Light</label>
                                             <select name="light" id="light">
-                      <option value="Dark"> Dark </option>
-                      <option value="Dark, artificial"> Dark, artificial </option>
-                      <option value="Dawn"> Dawn </option>
-                      <option value="Dawn, artificial"> Dawn, artificial </option>
-                      <option value="Daylight"> Daylight </option>
-                      <option value="Daylight, artificial"> Daylight, artificial </option>
-                      <option value="Dusk"> Dusk </option>
-                      <option value="Dusk, artificial"> Dusk, artificial </option>                          
-                    </select>
+                          <option value="Dark"> Dark </option>
+                          <option value="Dark, artificial"> Dark, artificial </option>
+                          <option value="Dawn"> Dawn </option>
+                          <option value="Dawn, artificial"> Dawn, artificial </option>
+                          <option value="Daylight"> Daylight </option>
+                          <option value="Daylight, artificial"> Daylight, artificial </option>
+                          <option value="Dusk"> Dusk </option>
+                          <option value="Dusk, artificial"> Dusk, artificial </option>                          
+                        </select>
                                         </li>
 
-                                        <li class="filter list-group-item">
+                                        <li class="filter list-group-item bg-secondary">
                                             <label for="condition">Road Condition</label>
                                             <select name="condition" id="condition">
-                      <option value="Dry"> Dry </option>
-                      <option value="Ice"> Ice </option>
-                      <option value="Loose Sand or Gravel"> Loose Sand or Gravel </option>
-                      <option value="Loose Snow"> Loose Snow </option>
-                      <option value="Packed Snow"> Packed Snow </option>
-                      <option value="Slush"> Slush </option>
-                      <option value="Spilled liquid"> Spilled liquid </option>
-                      <option value="Wet"> Wet </option>                          
-                    </select>
+                          <option value="Dry"> Dry </option>
+                          <option value="Ice"> Ice </option>
+                          <option value="Loose Sand or Gravel"> Loose Sand or Gravel </option>
+                          <option value="Loose Snow"> Loose Snow </option>
+                          <option value="Packed Snow"> Packed Snow </option>
+                          <option value="Slush"> Slush </option>
+                          <option value="Spilled liquid"> Spilled liquid </option>
+                          <option value="Wet"> Wet </option>                          
+                        </select>
                                         </li>
                                     </ul>
                                 </div>
@@ -165,10 +167,10 @@
             </div>
 
             <div class="col-md-10">
-                <label> Historical Data </label>
-                <div id="table-area" class="">
-                    <table id="traffic-table" class="table table-striped">
-                        <thead>
+                <label class="big text-mars-red"> Historical Data - use the filters to search the dataset</label>
+                <div id="table-area" class="table-responsive">
+                    <table id="traffic-table" class="table table-striped table-sm">
+                        <thead class="thead-dark">
                             <tr>
                                 <th class="table-head">Date</th>
                                 <th class="table-head">Hour</th>
@@ -184,6 +186,7 @@
                 </div>
             </div>
         </div>
+
 
         <footer class="mastfoot mt-auto">
             <div class="inner">
