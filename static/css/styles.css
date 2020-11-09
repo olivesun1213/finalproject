@@ -14,6 +14,18 @@
     font-size: 30px;
 }
 
+.bigger {
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.big {
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
 .mini-header-font {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
@@ -21,6 +33,11 @@
 
 .headline {
     font-weight: bolder;
+}
+
+#table-area {
+    height: 600px;
+    overflow-y: scroll;
 }
 
 tbody>tr>td {
