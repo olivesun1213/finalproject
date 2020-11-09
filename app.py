@@ -113,4 +113,4 @@ def onehot_encode(feature, value):
 if __name__ == '__main__':
     modelfile = 'models/DecisionTree_final_model.pickle'
     model = p.load(open(modelfile, 'rb'))
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True)
