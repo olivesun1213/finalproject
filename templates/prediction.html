@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="../static/favicon.ico">
 
     <title>Accident Fatality Prediction</title>
 
@@ -45,49 +46,10 @@
 
         <main role="main" class="inner cover">
 
-            <h3 class="text-light pred-font">{{pred}}</h3>
+            <h3 class="text-light pred-font">Given the input, there is a high probability of
+                <h2 class="text-mars-red pred-font">{{pred | upper}}</h2>
+                <h3 class="text-light pred-font">accidents.</h3>
 
-            <div class="row my-5">
-                <div class="col-sm-4">
-                    <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/dashboard" role="button">Our Dashboard</a></p>
-                </div>
-                <div class="col-sm-4">
-                    <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="/historicaldata" role="button">Historical Data</a></p>
-                </div>
-
-                <div class="col-sm-4">
-                    <p class="lead text-light"><a class="btn bg-mars-red btn-md" href="http://localhost:8888/notebooks/Models/ML_model_DecisionTrees.ipynb" role="button">Our Model</a></p>
-                </div>
-            </div>
-
-            <div class="row mt-3 mb-2">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <h3 class="text-light pred-font text-center">Other Models Tested</h3>
-                </div>
-                <div class="col-sm-4"></div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-3">
-                    <a class="btn btn-outline-light" href="#" role="button">Neural Network</a>
-                </div>
-                <div class="col-sm-3">
-                    <a class="btn btn-outline-light" href="#" role="button">Random Forest</a>
-                </div>
-                <div class="col-sm-3"></div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-3">
-                    <a class="btn btn-outline-light" href="#" role="button">Logistic Regression</a>
-                </div>
-                <div class="col-sm-3">
-                    <a class="btn btn-outline-light" href="#" role="button">SVM</a></div>
-                <div class="col-sm-3"></div>
-            </div>
         </main>
 
 
