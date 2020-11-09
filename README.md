@@ -22,7 +22,18 @@ This information could be used to possibly prevent accidents by encouraging driv
 
 Our app is deployed using Heroku and is available at: [Accident Fatality Predictor](http://accident-fatality-predictor.herokuapp.com/)
 
+![diagram](static/images/diagram.png)
+
 ### Tools used
+
+* Python and Jupyter Notebook
+* Libraries: pandas, numpy, sklearn, pickle, keras, tensorflow
+* Flask
+* Tableau
+* HTML/CSS
+* Javascript
+* Bootstrap
+* D3.js
 
 ### Machine Learning Models
 
