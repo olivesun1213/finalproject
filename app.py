@@ -60,7 +60,7 @@ def predict():
         # print(len(data_array))
 
     # predicting fatal or non-fatal with our model
-    modelfile = 'models/DecisionTree_final_model.pickle'
+    modelfile = 'Models/DecisionTree_final_model.pickle'
     model = p.load(open(modelfile, 'rb'))
     predict = model.predict(data_array)
 
