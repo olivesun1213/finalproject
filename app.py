@@ -6,14 +6,9 @@ import requests
 import numpy as np
 import pickle as p
 import json
-import tensorflow as tf
-import keras
-from keras.models import load_model
 
 # Create an instance of the Flask class
 app = Flask(__name__)
-
-#model = load_model('Models/mdl-neuralnetwork.h5')
 
 @app.route("/")
 def home():
@@ -21,7 +16,7 @@ def home():
 
 @app.route("/historicaldata")
 def historical():
-    return render_template("historical.html")
+    return render_template("data.html")
 
 @app.route("/dashboard")
 def dashboard():
@@ -29,12 +24,13 @@ def dashboard():
 
 @app.route("/models")
 def getmodels():
-    return render_template("models.html")
+    return render_template("Models.html")
 
 @app.route('/predict', methods=["GET", "POST"])
 def predict():
 
     if request.method == "POST": 
+
         # getting user input from HTML form
         hour = request.form["hour"]
         road_class = request.form["road_class"]
@@ -64,9 +60,9 @@ def predict():
         # print(len(data_array))
 
     # predicting fatal or non-fatal with our model
-    prediction = np.array2string(model.predict(data_array))
+    predict = model.predict(data_array)
 
-    return render_template("prediction.html", pred = prediction)
+    return render_template("prediction.html", pred = predict[0])
 
 # function to one hot encode user input for model prediction
 def onehot_encode(feature, value):
@@ -113,7 +109,6 @@ def onehot_encode(feature, value):
                 array[i] = 1
 
     return array
-
 
 if __name__ == '__main__':
     modelfile = 'models/DecisionTree_final_model.pickle'
