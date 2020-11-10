@@ -37,6 +37,14 @@ Our app is deployed using Heroku and is available at: [Accident Fatality Predict
 
 ### Machine Learning Models
 
+We tried following 5 models to predict discrete value (Fatal or Non-Fatal). Our final choice is Decision Tree model. 
+
+* Logistic Regression
+* SVM
+* Neural Network
+* Decision Tree
+* Random Forest
+
 ### Flask
 Our Flask app hosts our API endpoints as follows:
 
